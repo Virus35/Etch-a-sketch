@@ -3,6 +3,10 @@
     margin: 0px;
     background-color:#FFF;
 }
+#mainDiv{
+    display: flex;
+    background-color: #333;
+}
 #container{
     margin: 5px;
     padding: 5px;

@@ -1,6 +1,6 @@
 function createGrid(n){
     for(let i = 0; i < n*n; i++){
-        cont.setAttribute('style',`display:grid; width: 960px; height: 960px; grid-template-columns: repeat(${n}, 1fr); grid-auto-rows: auto ; grid-gap: 1px`);
+        cont.setAttribute('style',`display:grid; width: 700px; height: 700px; grid-template-columns: repeat(${n}, 1fr); grid-auto-rows: auto ; grid-gap: 1px`);
         const newDiv = document.createElement('div');
         newDiv.classList.add('block');
         newDiv.addEventListener('mouseenter', (e) => e.target.style.backgroundColor = 'red');
