@@ -12,22 +12,31 @@
 }
 #mainDiv{
     display: flex;
-    background-color: #333;
+    background-color: #555;
 }
 #container{
     flex-shrink:0;
+    order: 1;
     margin: 5px;
     padding: 5px;
-    background-color: #000;
+    background-color: #222;
     border-radius: 5px;
 }
 #palette{
-    background-color: #000;
+    background-color: #222;
     color: #FFF;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: center;
     border-radius: 5px;
+    flex-shrink: 0;
     flex-basis: 200px;
     padding: 10px;
     margin: 5px;
+}
+#palette > button{
+    padding: 10px 0px;
+}
+#palette > *{
+    margin: 10px 0px;
 }
