@@ -1,3 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    line-height: 100%;
+    font-size: 100%;
+    box-sizing: border-box;
+}
 .block{
     padding: 0px;
     margin: 0px;
@@ -8,7 +15,19 @@
     background-color: #333;
 }
 #container{
+    flex-shrink:0;
     margin: 5px;
     padding: 5px;
-    background-color: gray;
+    background-color: #000;
+    border-radius: 5px;
+}
+#palette{
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 5px;
+    flex-basis: 200px;
+    padding: 10px;
+    margin: 5px;
 }
