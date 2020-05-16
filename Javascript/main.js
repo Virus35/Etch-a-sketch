@@ -87,10 +87,14 @@ function fillColour(e){
     }
 }
 function fillTypeChange(){
+    const noFillBtn = document.getElementById('noFill');
+    const pickFillBtn = document.getElementById('pickFill');
+    const rainbowFillBtn = document.getElementById('rainbowFill');
     colourValue.parentElement.style.display = 'none';
     prevFillType.push(document.querySelector('input[type="radio"][name="fill"]:checked'));
     prevFillType.shift();
-    if(!(prevFillType.includes(document.getElementById('noFill')) || (prevFillType.includes(document.getElementById('pickFill')) && prevFillType.includes(document.getElementById('rainbowFill'))))){
+    console.log(prevFillType);
+    if(!(prevFillType[2] === noFillBtn || ((prevFillType[0] === prevFillType[2]) && prevFillType[1] === noFillBtn) || (((prevFillType[0] === pickFillBtn) || (prevFillType[0] === rainbowFillBtn)) && prevFillType[1] === noFillBtn) || (((prevFillType[1] === pickFillBtn) || (prevFillType[1] === rainbowFillBtn)) && ((prevFillType[2] === pickFillBtn) || (prevFillType[2] === rainbowFillBtn))) )){
         clearGrid();
     }
     if(document.getElementById('pickFill').checked){
@@ -109,7 +113,7 @@ createGrid(16);
 newGridBtn.addEventListener('click', function(){
     createGrid(getGridSize());
 });
-let prevFillType = [false, document.querySelector('input[type="radio"][name="fill"]:checked')];
+let prevFillType = [false, false, document.querySelector('input[type="radio"][name="fill"]:checked')];
 clearGridBtn.addEventListener('click', clearGrid);
 randomBtn.addEventListener('click', randomFill);
 fillType.forEach(function(type){
