@@ -16,6 +16,9 @@ function createGrid(n){
         const newDiv = document.createElement('div');
         newDiv.style.border = '1px solid #555';
         newDiv.classList.add('block');
+        newDiv.addEventListener('mouseenter', function(e){
+            fillColour(e);
+        });
         cont.appendChild(newDiv);
     }
 }
@@ -107,15 +110,9 @@ newGridBtn.addEventListener('click', function(){
     createGrid(getGridSize());
 });
 let prevFillType = [false, document.querySelector('input[type="radio"][name="fill"]:checked')];
-const gridElem = document.querySelectorAll('#container > .block');
 clearGridBtn.addEventListener('click', clearGrid);
 randomBtn.addEventListener('click', randomFill);
 fillType.forEach(function(type){
     type.addEventListener('change', fillTypeChange);
-});
-gridElem.forEach(function(ele){
-    ele.addEventListener('mouseenter', function(e){
-        fillColour(e);
-    });
 });
 borderCheck.addEventListener('change', toggleBorder);
