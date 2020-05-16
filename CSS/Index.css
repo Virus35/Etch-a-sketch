@@ -18,8 +18,8 @@
     flex-shrink:0;
     order: 1;
     margin: 5px;
-    padding: 5px;
-    background-color: #222;
+    background-color: #FFF;
+    border: 5px solid #222;
     border-radius: 5px;
 }
 #palette{
@@ -34,9 +34,12 @@
     padding: 10px;
     margin: 5px;
 }
-#palette > button{
+button{
     padding: 10px 0px;
 }
 #palette > *{
     margin: 10px 0px;
+}
+label[for='colourPick']{
+    display: none;
 }
