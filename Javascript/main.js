@@ -1,7 +1,7 @@
 function getGridSize(){
     let size = prompt('Enter the grid edge length(1-70), cancelling will create default 16x16 grid.');
     removeGrid();
-    if(size >= 1 && size <= 70){
+    if(size >= 1 && size <= 64){
         return size;
     }
     else{
